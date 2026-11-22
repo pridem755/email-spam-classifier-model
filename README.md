@@ -102,21 +102,10 @@ backend. The last cell reloads the saved model and runs a test prediction.
 
 ## How to run
 
-### Google Colab (recommended)
+This notebook is built for Google Colab. The first cell installs every required
+package, so no separate `requirements.txt` is needed.
+
 1. Open `ml_training_pipeline.ipynb` in [Google Colab](https://colab.research.google.com/).
 2. Upload your dataset to Google Drive as `MyDrive/spam_dataset.csv`.
 3. Run all cells. When asked, allow Colab to mount your Drive. The model and
    metadata files download automatically at the end.
-
-### Locally
-1. Install the dependencies:
-   ```bash
-   pip install scikit-learn pandas numpy matplotlib seaborn wordcloud joblib jupyter
-   ```
-2. Start Jupyter: `jupyter notebook ml_training_pipeline.ipynb`
-3. Make these Colab-only changes before running:
-   - Comment out `from google.colab import files` (imports cell) and the
-     `drive.mount` cell
-   - Change the `pd.read_csv(...)` path to your local CSV
-   - Comment out the two `files.download(...)` lines in the save-model cell. The
-     model files are still saved to the working directory.
