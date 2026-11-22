@@ -32,9 +32,6 @@ The notebook expects a CSV with two columns:
 | `message` | Raw message/email text               |
 | `label`   | `spam` or `ham`                      |
 
-The merged dataset used in the notebook has 99,368 messages. In Colab the notebook
-loads it from `/content/drive/MyDrive/spam_dataset.csv`.
-
 ## Exploratory data analysis
 
 - Class distribution, with bar and pie charts and the spam/ham balance ratio
